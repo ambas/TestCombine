@@ -15,6 +15,13 @@
 		F522D0F3269A86E3007030FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522D0CF269A86E2007030FC /* ContentView.swift */; };
 		F522D0F4269A86E3007030FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F522D0D0269A86E2007030FC /* Assets.xcassets */; };
 		F522D0F5269A86E3007030FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F522D0D0269A86E2007030FC /* Assets.xcassets */; };
+		F58FC1C0269AECC200A0E214 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1BF269AECC200A0E214 /* Combine.swift */; };
+		F58FC1D0269AF1EA00A0E214 /* CurrentValueSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1CF269AF1EA00A0E214 /* CurrentValueSubject.swift */; };
+		F58FC1D2269AF21600A0E214 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1D1269AF21600A0E214 /* Cancellable.swift */; };
+		F58FC1D4269AF23200A0E214 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1D3269AF23200A0E214 /* Subscription.swift */; };
+		F58FC1D6269AF26600A0E214 /* ConduitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1D5269AF26600A0E214 /* ConduitBase.swift */; };
+		F58FC1D8269AF58A00A0E214 /* ConduitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1D7269AF58A00A0E214 /* ConduitList.swift */; };
+		F58FC1DB269B0B7200A0E214 /* Demand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58FC1DA269B0B7200A0E214 /* Demand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		F522D0E4269A86E3007030FC /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		F522D0EA269A86E3007030FC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F522D0EE269A86E3007030FC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		F58FC1BF269AECC200A0E214 /* Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combine.swift; sourceTree = "<group>"; };
+		F58FC1CF269AF1EA00A0E214 /* CurrentValueSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueSubject.swift; sourceTree = "<group>"; };
+		F58FC1D1269AF21600A0E214 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		F58FC1D3269AF23200A0E214 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		F58FC1D5269AF26600A0E214 /* ConduitBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConduitBase.swift; sourceTree = "<group>"; };
+		F58FC1D7269AF58A00A0E214 /* ConduitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConduitList.swift; sourceTree = "<group>"; };
+		F58FC1DA269B0B7200A0E214 /* Demand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +105,7 @@
 		F522D0CD269A86E2007030FC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F522D104269A882B007030FC /* Combine */,
 				F522D0CE269A86E2007030FC /* TestCombineApp.swift */,
 				F522D0CF269A86E2007030FC /* ContentView.swift */,
 				F522D0D0269A86E2007030FC /* Assets.xcassets */,
@@ -123,6 +138,28 @@
 				F522D0EE269A86E3007030FC /* Tests_macOS.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		F522D104269A882B007030FC /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				F58FC1D9269B0B6400A0E214 /* Subscribers */,
+				F58FC1D1269AF21600A0E214 /* Cancellable.swift */,
+				F58FC1BF269AECC200A0E214 /* Combine.swift */,
+				F58FC1D5269AF26600A0E214 /* ConduitBase.swift */,
+				F58FC1D7269AF58A00A0E214 /* ConduitList.swift */,
+				F58FC1CF269AF1EA00A0E214 /* CurrentValueSubject.swift */,
+				F58FC1D3269AF23200A0E214 /* Subscription.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		F58FC1D9269B0B6400A0E214 /* Subscribers */ = {
+			isa = PBXGroup;
+			children = (
+				F58FC1DA269B0B7200A0E214 /* Demand.swift */,
+			);
+			path = Subscribers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58FC1D4269AF23200A0E214 /* Subscription.swift in Sources */,
+				F58FC1D6269AF26600A0E214 /* ConduitBase.swift in Sources */,
+				F58FC1D2269AF21600A0E214 /* Cancellable.swift in Sources */,
+				F58FC1D0269AF1EA00A0E214 /* CurrentValueSubject.swift in Sources */,
+				F58FC1C0269AECC200A0E214 /* Combine.swift in Sources */,
 				F522D0F2269A86E3007030FC /* ContentView.swift in Sources */,
+				F58FC1D8269AF58A00A0E214 /* ConduitList.swift in Sources */,
+				F58FC1DB269B0B7200A0E214 /* Demand.swift in Sources */,
 				F522D0F0269A86E3007030FC /* TestCombineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
